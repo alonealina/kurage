@@ -659,7 +659,7 @@ opacity:0;
 /*タブ切り替え全体のスタイル*/
 .tabs {
   margin-top: 50px;
-  width: 600px;
+  width: 500px;
   margin: 0 auto;}
 
 .tab_sp {
@@ -731,7 +731,7 @@ input[name="tab_item"] {
   .right_content{
    position: fixed;
     right: 10%;
-    top: 37%; 
+    top: 25%; 
   }
 }
 
@@ -740,7 +740,7 @@ input[name="tab_item"] {
   .right_content{
    position: fixed;
     right: 5%;
-    top: 37%; 
+    top: 23%; 
   }
 }
 
@@ -749,7 +749,7 @@ input[name="tab_item"] {
   .right_content{
    position: fixed;
     right: 5%;
-    top: 30%; 
+    top: 23%; 
   }
 }
   
@@ -766,9 +766,9 @@ input[name="tab_item"] {
   .italic_line{
     border-right: 1px solid;
     position: fixed;
-    width: 223px;
+    width: 155px;
     height: 416px;
-    transform: matrix(0.87, -0.5, 0.5, 0.87, -104, 75);
+    transform: matrix(0.87, -0.5, 0.5, 0.87, -47, 65);
     background: #FFF 0% 0% no-repeat padding-box;
   }
   
@@ -779,11 +779,11 @@ input[name="tab_item"] {
     height:25px;
   }
   .company_profile {
-    width: 35%;
+    width: 29%;
     font: normal normal normal 20px/22px HiraginoKaku W3;
   }
   .company_title {
-    width: 32%;
+    width: 38%;
     font: normal normal normal 14px/18px Kozuka Gothic Pr6N;
   }
   .company_content {
@@ -1328,8 +1328,8 @@ left:10%;
     }
     .left5{
       position: fixed;
-      top: 80%;
-      left: 35%;
+      top: 82%;
+      left: 37%;
     }
     .left5 p{
       font-size: 1.1em; /* 2 */

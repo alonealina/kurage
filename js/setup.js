@@ -51,15 +51,11 @@ $(function () {
     $('.right_news').removeClass('fade1');
     $('.right_contact').removeClass('fade1');
     $('.right_link').removeClass('fade1');
-    $('#page1').addClass('bg_white');
-    $('#page1').removeClass('bg_blue');
-    $('#page1').removeClass('bg_green');
-    $('#page1').removeClass('bg_red');
-    $('#page1').removeClass('bg_black');
-    var elements = document.getElementsByClassName('button_p');
-    for (i = 0; i < elements.length; i++) {
-      elements[i].style.color = "#262626";
-    }
+    document.getElementById('company_button').style.color = "#8890B9";
+    document.getElementById('service_button').style.color = "#262626";
+    document.getElementById('news_button').style.color = "#262626";
+    document.getElementById('contact_button').style.color = "#262626";
+    document.getElementById('link_button').style.color = "#262626";
   });
 
   $('.left3').on('click', function () {
@@ -77,15 +73,11 @@ $(function () {
     $('.right_news').removeClass('fade1');
     $('.right_contact').removeClass('fade1');
     $('.right_link').removeClass('fade1');
-    $('#page1').removeClass('bg_white');
-    $('#page1').addClass('bg_blue');
-    $('#page1').removeClass('bg_green');
-    $('#page1').removeClass('bg_red');
-    $('#page1').removeClass('bg_black');
-    var elements = document.getElementsByClassName('button_p');
-    for (i = 0; i < elements.length; i++) {
-      elements[i].style.color = "#FFFFFF";
-    }
+    document.getElementById('company_button').style.color = "#262626";
+    document.getElementById('service_button').style.color = "#8DCFC9";
+    document.getElementById('news_button').style.color = "#262626";
+    document.getElementById('contact_button').style.color = "#262626";
+    document.getElementById('link_button').style.color = "#262626";
   });
 
   $('.blue_right1').on('click', function () {
@@ -185,15 +177,11 @@ $(function () {
     $('.right_news').addClass('fade1');
     $('.right_contact').removeClass('fade1');
     $('.right_link').removeClass('fade1');
-    $('#page1').removeClass('bg_white');
-    $('#page1').removeClass('bg_blue');
-    $('#page1').addClass('bg_green');
-    $('#page1').removeClass('bg_red');
-    $('#page1').removeClass('bg_black');
-    var elements = document.getElementsByClassName('button_p');
-    for (i = 0; i < elements.length; i++) {
-      elements[i].style.color = "#FFFFFF";
-    }
+    document.getElementById('company_button').style.color = "#262626";
+    document.getElementById('service_button').style.color = "#262626";
+    document.getElementById('news_button').style.color = "#D196A3";
+    document.getElementById('contact_button').style.color = "#262626";
+    document.getElementById('link_button').style.color = "#262626";
   });
 
   $('.left5').on('click', function () {
@@ -212,15 +200,11 @@ $(function () {
     $('.right_news').removeClass('fade1');
     $('.right_contact').addClass('fade1');
     $('.right_link').removeClass('fade1');
-    $('#page1').removeClass('bg_white');
-    $('#page1').removeClass('bg_blue');
-    $('#page1').removeClass('bg_green');
-    $('#page1').addClass('bg_red');
-    $('#page1').removeClass('bg_black');
-    var elements = document.getElementsByClassName('button_p');
-    for (i = 0; i < elements.length; i++) {
-      elements[i].style.color = "#FFFFFF";
-    }
+    document.getElementById('company_button').style.color = "#262626";
+    document.getElementById('service_button').style.color = "#262626";
+    document.getElementById('news_button').style.color = "#262626";
+    document.getElementById('contact_button').style.color = "#977FA4";
+    document.getElementById('link_button').style.color = "#262626";
   });
 
   $('.left6').on('click', function () {
@@ -239,15 +223,11 @@ $(function () {
     $('.right_news').removeClass('fade1');
     $('.right_contact').removeClass('fade1');
     $('.right_link').addClass('fade1');
-    $('#page1').removeClass('bg_white');
-    $('#page1').removeClass('bg_blue');
-    $('#page1').removeClass('bg_green');
-    $('#page1').removeClass('bg_red');
-    $('#page1').addClass('bg_black');
-    var elements = document.getElementsByClassName('button_p');
-    for (i = 0; i < elements.length; i++) {
-      elements[i].style.color = "#FFFFFF";
-    }
+    document.getElementById('company_button').style.color = "#262626";
+    document.getElementById('service_button').style.color = "#262626";
+    document.getElementById('news_button').style.color = "#262626";
+    document.getElementById('contact_button').style.color = "#262626";
+    document.getElementById('link_button').style.color = "#CCCCCC";
   });
 });
 
