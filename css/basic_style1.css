@@ -176,9 +176,7 @@ text-decoration: none;
   position: absolute;
   width: 300px;
 }
-    
-}
-  
+
 
 div.container4 {
     height: 100vh;
@@ -370,6 +368,10 @@ transition: .6s;
   
 }
 
+#link_content {
+  top:50%;
+  transition: .6s;
+}
 .opa5{
   opacity:0;
 }
@@ -377,6 +379,18 @@ transition: .6s;
   opacity:1;
 }
 
+.top_btn {
+  display: block;
+  position: fixed;
+  top: 85%;
+  right: 100px;
+}
+
+#send_button {
+  position: fixed;
+  top: 75%;
+  right: 140px;
+}
 
 .logo1{
   margin: 0;
@@ -517,34 +531,24 @@ opacity:0;
 
 
 .fade1{
+  animation: fadeIn 1.5s ease 0.0s 1 backwards;
+}
 
-      animation: fadeIn 1.5s ease 0.0s 1 backwards;
-    
-    }
-  
 .fade2{
+  animation: fadeIn 1.0s ease 0.0s 1 backwards;
+}
 
-      animation: fadeIn 1.0s ease 0.0s 1 backwards;
-    
-    }
-  
 .fade3{
-
-      animation: fadeIn 1.0s ease 1.2s 1 backwards;
-    
-    }
+  animation: fadeIn 1.0s ease 1.2s 1 backwards;
+}
 
 .fade4{
-
-      animation: fadeIn 0.5s ease 2.0s 1 backwards;
-    
-    }
+  animation: fadeIn 0.5s ease 2.0s 1 backwards;
+}
 
 .fade5{
-
-      animation: fadeIn2 1.5s ease 0.0s 1 both;
-    
-    }
+  animation: fadeIn2 1.5s ease 0.0s 1 both;
+}
   
     @keyframes fadeIn { 
   
@@ -728,28 +732,50 @@ input[name="tab_item"] {
 
 @media screen and (min-width:1401px){
 
-  .right_content{
-   position: fixed;
+  .haikei5 .right_content,
+  .haikei12 .right_content {
+    position: fixed;
     right: 10%;
-    top: 25%; 
+    top: 28%; 
+  }
+   .right_content{
+    position: fixed;
+    right: 10%;
+    top: 37%; 
   }
 }
 
 @media screen and (min-width:1001px) and (max-width:1400px){
 
-  .right_content{
-   position: fixed;
+  .haikei5 .right_content {
+    position: fixed;
     right: 5%;
     top: 23%; 
   }
-}
+  .haikei12 .right_content {
+    position: fixed;
+    right: 10%;
+    top: 25%; 
+  }
+  .right_content{
+    position: fixed;
+    right: 5%;
+    top: 37%; 
+    }
+  }
 
 @media screen and (min-width:430px) and (max-width:1000px){
 
-  .right_content{
-   position: fixed;
+  .haikei5 .right_content,
+  .haikei12 .right_content {
+    position: fixed;
     right: 5%;
     top: 23%; 
+  }
+  .right_content{
+    position: fixed;
+    right: 5%;
+    top: 30%; 
   }
 }
   
@@ -816,9 +842,27 @@ text-align: right;
     border-color:#FFF;
    }
    .red_right2{
-    border-bottom:solid;
-    border-width:1px;
-    border-color:#FFF;
+    width:525px;
+    display: flex;
+    justify-content: space-between;
+    margin-top:100px;
+    transition: 1.0s;
+   }
+   .contact_en {
+    margin-left: 10px;
+    font: normal normal normal 20px/22px HiraginoKaku W3;
+   }
+   .contact_ja {
+    margin-right: 20px;
+    font-size: 15px;
+   }
+   #contact_line {
+    width: 0%;
+    top: 35px;
+    position: relative;
+    float: left;
+    border: 1px solid;
+    transition: 0.6s;
    }
    .right3{
     width: 590px;
@@ -1357,12 +1401,6 @@ left:10%;
     }
 
 
-hr{
-  text-align: left;
-  margin-top:25px;
-  }
-
-
 /*------------------------------------------------------------*/
 
 
@@ -1374,15 +1412,6 @@ hr{
   text-align:center;
 }
 
-  
-  textarea {
-    
-  font-size:23pt;
-  border: 4px #104089 solid;
-  text-align:left;
-  width:500px;
-  height:130px;
-  }
   
   select {
     
@@ -1443,14 +1472,21 @@ hr{
   animation: 3.5s fuwafuwa2 infinite;
 }
 
-input, textarea{
+input[type="text"], textarea {
+  width: 400px;
   font-family:Helvetica, sans-serif; /* 1 */
-  font-size: 1.1em; /* 2 */
   font-weight:100;
   font-style: italic;
-  border: none;
-  background:none;
+  margin-left: 30px;
+  background:white;
+  border-radius:4px;
+  font-size:15px;
+  border: 1px solid #656565;
+  padding-left: 20px;
+  resize: none;
 }
+
+
 input::placeholder, textarea::placeholder{
   color:#CBCBCB;
   font-family:Helvetica, sans-serif; 
@@ -1533,16 +1569,18 @@ margin-top:450px;
     }
     
     .black_right2{
-      width: 700px;
-      float: right;
+      width: 100%;
+      text-align: center;
     font-size:13px;
     font-weight:100;
     }
     
     .black_right3{
-    font-size:23px;
-    font-weight:300;
-    color:#ffffff;
+      font: normal normal normal 30px/60px Kozuka Gothic;
+      font-weight:300;
+      color:#191919;
+      text-decoration: none;
+      text-align: center;
     }
     
     .black_right3:hover{

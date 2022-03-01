@@ -51,11 +51,6 @@ $(function () {
     $('.right_news').removeClass('fade1');
     $('.right_contact').removeClass('fade1');
     $('.right_link').removeClass('fade1');
-    document.getElementById('company_button').style.color = "#8890B9";
-    document.getElementById('service_button').style.color = "#262626";
-    document.getElementById('news_button').style.color = "#262626";
-    document.getElementById('contact_button').style.color = "#262626";
-    document.getElementById('link_button').style.color = "#262626";
   });
 
   $('.left3').on('click', function () {
@@ -73,11 +68,6 @@ $(function () {
     $('.right_news').removeClass('fade1');
     $('.right_contact').removeClass('fade1');
     $('.right_link').removeClass('fade1');
-    document.getElementById('company_button').style.color = "#262626";
-    document.getElementById('service_button').style.color = "#8DCFC9";
-    document.getElementById('news_button').style.color = "#262626";
-    document.getElementById('contact_button').style.color = "#262626";
-    document.getElementById('link_button').style.color = "#262626";
   });
 
   $('.blue_right1').on('click', function () {
@@ -177,11 +167,6 @@ $(function () {
     $('.right_news').addClass('fade1');
     $('.right_contact').removeClass('fade1');
     $('.right_link').removeClass('fade1');
-    document.getElementById('company_button').style.color = "#262626";
-    document.getElementById('service_button').style.color = "#262626";
-    document.getElementById('news_button').style.color = "#D196A3";
-    document.getElementById('contact_button').style.color = "#262626";
-    document.getElementById('link_button').style.color = "#262626";
   });
 
   $('.left5').on('click', function () {
@@ -194,17 +179,10 @@ $(function () {
     $('.haikei11').addClass('opa5');
     $('.haikei13').addClass('opa5');
     $('.haikei12').removeClass('opa5');
-    $('.right_bg').addClass('fade1');
     $('.right_company').removeClass('fade1');
     $('.right_sevice').removeClass('fade1');
     $('.right_news').removeClass('fade1');
-    $('.right_contact').addClass('fade1');
     $('.right_link').removeClass('fade1');
-    document.getElementById('company_button').style.color = "#262626";
-    document.getElementById('service_button').style.color = "#262626";
-    document.getElementById('news_button').style.color = "#262626";
-    document.getElementById('contact_button').style.color = "#977FA4";
-    document.getElementById('link_button').style.color = "#262626";
   });
 
   $('.left6').on('click', function () {
@@ -223,12 +201,89 @@ $(function () {
     $('.right_news').removeClass('fade1');
     $('.right_contact').removeClass('fade1');
     $('.right_link').addClass('fade1');
+  });
+
+  // SVG、ボタン、CONTACT内容、LINK内容
+  $('.left2').on('click', function () {
+    document.getElementById('logo_svg').style.fill = "#8890B9";
+    document.getElementById('company_button').style.color = "#8890B9";
+    document.getElementById('service_button').style.color = "#262626";
+    document.getElementById('news_button').style.color = "#262626";
+    document.getElementById('contact_button').style.color = "#262626";
+    document.getElementById('link_button').style.color = "#262626";
+    $('.red_right2').removeClass('fade1');
+    $('#contact_line').removeClass('fade2');
+    document.getElementById('contact_title').style.marginTop = '100px';
+    document.getElementById('contact_line').style.width = '0%';
+    $('.contact_div').removeClass('fade3');
+    $('.top_btn').removeClass('fade3');
+
+    document.getElementById('link_content').style.top = "50%";
+  });
+  $('.left3').on('click', function () {
+    document.getElementById('logo_svg').style.fill = "#8DCFC9";
+    document.getElementById('company_button').style.color = "#262626";
+    document.getElementById('service_button').style.color = "#8DCFC9";
+    document.getElementById('news_button').style.color = "#262626";
+    document.getElementById('contact_button').style.color = "#262626";
+    document.getElementById('link_button').style.color = "#262626";
+    $('.red_right2').removeClass('fade1');
+    $('#contact_line').removeClass('fade2');
+    document.getElementById('contact_title').style.marginTop = '100px'; 
+    document.getElementById('contact_line').style.width = '0%';
+    $('.contact_div').removeClass('fade3');
+    $('.top_btn').removeClass('fade3');
+
+    document.getElementById('link_content').style.top = "50%";
+  });
+  $('.left4').on('click', function () {
+    document.getElementById('logo_svg').style.fill = "#D196A3";
+    document.getElementById('company_button').style.color = "#262626";
+    document.getElementById('service_button').style.color = "#262626";
+    document.getElementById('news_button').style.color = "#D196A3";
+    document.getElementById('contact_button').style.color = "#262626";
+    document.getElementById('link_button').style.color = "#262626";
+    $('.red_right2').removeClass('fade1');
+    $('#contact_line').removeClass('fade2');
+    document.getElementById('contact_title').style.marginTop = '100px'; 
+    document.getElementById('contact_line').style.width = '0%';
+    $('.contact_div').removeClass('fade3');
+    $('.top_btn').removeClass('fade3');
+
+    document.getElementById('link_content').style.top = "50%";
+  });
+  $('.left5').on('click', function () {
+    document.getElementById('logo_svg').style.fill = "#977FA4";
+    document.getElementById('company_button').style.color = "#262626";
+    document.getElementById('service_button').style.color = "#262626";
+    document.getElementById('news_button').style.color = "#262626";
+    document.getElementById('contact_button').style.color = "#977FA4";
+    document.getElementById('link_button').style.color = "#262626";
+    $('.red_right2').addClass('fade1');
+    $('#contact_line').addClass('fade2');
+    document.getElementById('contact_title').style.marginTop = '0px'; 
+    document.getElementById('contact_line').style.width = '100%';
+    $('.contact_div').addClass('fade3');
+    $('.top_btn').addClass('fade3');
+    document.getElementById('link_content').style.top = "50%";
+  });
+  $('.left6').on('click', function () {
+    document.getElementById('logo_svg').style.fill = "#CCCCCC";
     document.getElementById('company_button').style.color = "#262626";
     document.getElementById('service_button').style.color = "#262626";
     document.getElementById('news_button').style.color = "#262626";
     document.getElementById('contact_button').style.color = "#262626";
     document.getElementById('link_button').style.color = "#CCCCCC";
+    $('.red_right2').removeClass('fade1');
+    $('#contact_line').removeClass('fade2');
+    document.getElementById('contact_title').style.marginTop = '100px'; 
+    document.getElementById('contact_line').style.width = '0%';
+    $('.contact_div').removeClass('fade3');
+    $('.top_btn').removeClass('fade3');
+    document.getElementById('link_content').style.top = "37%";
   });
+
+
 });
 
 function clickNews(id) {
