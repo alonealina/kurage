@@ -1,10 +1,10 @@
 <?php
 try {
     $id = $_GET['id'];
-    $pdo = new PDO('mysql:host=localhost;dbname=kurage;charset=utf8', 'kurage', 'admin');
+    $pdo = new PDO('mysql:host=localhost;dbname=kurage;charset=utf8', 'root', '');
     $qry = $pdo->prepare('select * from news WHERE id = '. $id);
     $qry->execute();
-    $html = '<p class="news_right2"><span style="position:relative;right:555px;">News</span></p>';
+    $html = '';
     foreach($qry->fetchAll() as $row){
         $html .= '<p class="news_detail_date">'.$row["created_at"].'</p>'.
             '<p class="news_detail_title">'.$row["title"].'</p>'.

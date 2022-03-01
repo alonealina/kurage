@@ -8,7 +8,7 @@ $(function(){
       alert("氏名・返信用メールアドレス・お問い合わせ内容を入力してください");
       return;
     }
-    $('.contact_div').html('送信中');
+    $('.contact_div').html('<br>送信中');
     $.ajax({
       type: "POST",
       url: "mail_send.php",
@@ -16,7 +16,7 @@ $(function(){
       dataType : "json"
     }).done(function(data){
       if (data) {
-        $('.contact_div').html('送信が完了いたしました。<br>対応に3営業日いただいております。<br>もう少々お待ちいただけると幸いです。');
+        $('.contact_div').html('<br>送信が完了いたしました。<br>対応に3営業日いただいております。<br>もう少々お待ちいただけると幸いです。');
       } else {
 
       }

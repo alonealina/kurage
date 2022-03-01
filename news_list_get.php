@@ -1,12 +1,14 @@
 <?php
 try {
     $page = $_GET['page'];
-    $pdo = new PDO('mysql:host=localhost;dbname=provision;charset=utf8', 'provision', 'admin');
+    $pdo = new PDO('mysql:host=localhost;dbname=kurage;charset=utf8', 'root', '');
     $qry = $pdo->prepare('select * from news LIMIT 0, 10');
     $qry->execute();
-    $html = '<p class="news_right2"><span style="position:relative;right:555px;">News</span></p>';
+    $html = '';
     foreach($qry->fetchAll() as $row){
-        $html .= '<a class="news_a" href="javascript:clickNews('. $row["id"] .');"><p class="news_right3">' . $row["created_at"] . '<span style="position:relative;left:50px;">' . $row["title"] . '</span></p></a>';
+        $html .= '<a class="news_a" href="javascript:clickNews('. $row["id"] .');">
+        <div class="news_right3"><div>' . $row["created_at"] . '</div><div>' . $row["title"] . '</div></div></a>
+        <div class="news_column_line"></div>';
     }
     echo json_encode($html);
 } catch (Exception $e) {
