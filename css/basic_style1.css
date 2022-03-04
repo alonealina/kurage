@@ -725,7 +725,7 @@ opacity:0;
   line-height: 50px;
   font-size: 16px;
   text-align: center;
-  color: #262626;
+  color: #CECECE;
   display: block;
   float: left;
   text-align: center;
@@ -751,17 +751,18 @@ input[name="tab_item"] {
 
 
 /*選択されているタブのコンテンツのみを表示*/
-#all:checked ~ #all_content,
-#all_sp:checked ~ #all_content_sp,
-#programming:checked ~ #programming_content,
-#programming_sp:checked ~ #programming_content_sp,
+#profile:checked ~ #profile_content,
+#profile_sp:checked ~ #profile_content_sp,
+#history:checked ~ #history_content,
+#history_sp:checked ~ #history_content_sp,
 #design:checked ~ #design_content {
   display: block;
   color: #262626;
 }
 
 /*選択されているタブのスタイルを変える*/
-.tabs input:checked + .tab_item {
+.tabs input:checked + .tab_item,
+.tab_sp input:checked + .tab_item {
   /* background-color: white; */
   color: #262626;
   border-bottom: 1px solid #262626;
@@ -851,6 +852,12 @@ input[name="tab_item"] {
     display: flex;
     height:25px;
   }
+  .company_column {
+    width: 95%;
+    margin: 25px 0;
+    display: flex;
+    height:25px;
+  }
   .company_profile {
     width: 29%;
     font: normal normal normal 20px/22px HiraginoKaku W3;
@@ -858,31 +865,65 @@ input[name="tab_item"] {
   .company_title {
     width: 38%;
     font: normal normal normal 14px/18px Kozuka Gothic Pr6N;
+    transition: 0.6s;
   }
   .company_content {
     width: 70%;
     text-align: right;
     font: normal normal normal 14px/18px Kozuka Gothic Pr6N;
+    transition: 0.6s;
   }
   .company_line {
-    width:120%;
+    width:0%;
     height: 1px;
     margin-top:8px;
     margin-right:10px;
+    transition: 0.6s;
+  }
+  .company_mt {
+    margin-top:30px;
+  }
+  .company_width {
+    width:120%;
   }
   .flex3 {
     margin-top: 17px;
     width: 600px;
     text-align: right;
   }
-  .right2{
-    width: 600px;
-    margin:0 0 0 auto;
+  .company_head_sp{
+    margin:20px auto 0 auto;
+    padding:0 10px;
     border-bottom:solid;
     border-width:1px;
     border-color:#262626;
-   }
-   .news_right2{
+    font-size: 20px;
+  }
+  .company_column_sp{
+    width:90%;
+    margin:20px auto 0 auto;
+    padding:0 10px;
+    border-bottom:solid;
+    border-width:1px;
+    border-color:#262626;
+  }
+  .company_column_sp2{
+    width:90%;
+    height: 50px;
+    margin: 10px auto 0 auto;
+    padding:0 10px;
+    border-bottom:solid;
+    border-width:1px;
+    border-color:#262626;
+  }
+  .company_span {
+    position: relative;
+    float: right;
+    text-align: right;
+    font-size: 14px;
+  }
+
+  .news_right2{
     width: 600px;
     margin:0 0 0 auto;
     border-bottom:solid;
@@ -904,7 +945,7 @@ input[name="tab_item"] {
     margin-right: 20px;
     font-size: 15px;
    }
-   #contact_line, #news_line {
+   #contact_line, #news_line, #service_line1, #service_line2, #service_line3, #service_line4 {
     width: 0%;
     top: 35px;
     position: relative;
@@ -912,14 +953,7 @@ input[name="tab_item"] {
     border: 1px solid;
     transition: 0.6s;
    }
-   .right3{
-    width: 590px;
-    margin:20px 0 0 auto;
-    text-align:left;
-    border-bottom:solid;
-    border-width:1px;
-    border-color:#262626;
-   }
+
    .news_right3{
     width: 560px;
     margin:10px 20px;
@@ -966,55 +1000,6 @@ input[name="tab_item"] {
     font: normal normal normal 15px/20px Hiragino Sans;
    }
 
-   .right4{
-    width: 580px;
-    margin:20px 0 0 auto;
-    text-align:left;
-    border-bottom:solid;
-    border-width:1px;
-    border-color:#262626;
-   }
-   .right5{
-    width: 570px;
-    margin:20px 0 0 auto;
-    text-align:left;
-    border-bottom:solid;
-    border-width:1px;
-    border-color:#262626;
-   }
-   .right6{
-    width: 560px;
-    margin:20px 0 0 auto;
-    text-align:left;
-    border-bottom:solid;
-    border-width:1px;
-    border-color:#262626;
-   }
-   .right7{
-    width: 550px;
-    margin:20px 0 0 auto;
-    text-align:left;
-    border-bottom:solid;
-    border-width:1px;
-    border-color:#262626;
-   }
-   .right8{
-    width: 540px;
-    margin:20px 0 0 auto;
-    text-align:left;
-    border-bottom:solid;
-    border-width:1px;
-    border-color:#262626;
-   }
-   .right9{
-    width: 530px;
-    margin:20px 0 0 auto;
-    text-align:left;
-    border-bottom:solid;
-    border-width:1px;
-    border-color:#262626;
-   }
-
    .blue_right_bg{
     width: 50%;
     position: fixed;
@@ -1031,153 +1016,45 @@ input[name="tab_item"] {
     z-index: 4;
    }
 
-   .blue_right0{
-    width: 700px;
-    text-align: right;
-    }
-  .blue_right1{
-    width:200px;
-    height: 200px;
-    top:10px;
+  .blue_right1, .blue_right2, .blue_right3, .blue_right4 {
+    width:350px;
+    text-align: center;
+    font: normal normal normal 30px/33px HiraginoKaku W3;
+    top:600px;
     margin-left:200px;
     position:		relative;
-  }
-  .blue_right1 .caption {
-    font-size:		110%;
-    text-align: 		center;
-    padding-top:		95px;
-    color:			#fff;
-  }
-  .blue_right1 .mask {
-    width:			100%;
-    height:			100%;
-    position:		absolute;	/* 絶対位置指定 */
-    top:			0;
-    left:			0;
-    opacity:		0;	/* マスクを表示しない */
-    background-color:	rgba(0,0,0,0.4);	/* マスクは半透明 */
-    -webkit-transition:	all 0.2s ease;
-    transition:		all 0.2s ease;
-    border-radius:130px;
-  }
-  
-  .blue_right1:hover .mask {
-    opacity:		1;	/* マスクを表示する */
-  }
-  .blue_right2{
-    width:200px;
-    height: 200px;
-    position: relative;
-    top:-100px;
-    left:500px;
-    position:		relative;
-  }
-  .blue_right2 .caption {
-    font-size:		110%;
-    text-align: 		center;
-    padding-top:		95px;
-    color:			#fff;
-  }
-  .blue_right2 .mask {
-    width:			100%;
-    height:			100%;
-    position:		absolute;	/* 絶対位置指定 */
-    top:			0;
-    left:			0;
-    opacity:		0;	/* マスクを表示しない */
-    background-color:	rgba(0,0,0,0.4);	/* マスクは半透明 */
-    -webkit-transition:	all 0.2s ease;
-    transition:		all 0.2s ease;
-    border-radius:130px;
-  }
-  
-  .blue_right2:hover .mask {
-    opacity:		1;	/* マスクを表示する */
-  }
-  
-  .blue_right3{
-    position: relative;
-    width:200px;
-    height: 200px;
-    top:-120px;
-    left:250px;
-  }
-  .blue_right3 .caption {
-    font-size:		110%;
-    text-align: 		center;
-    padding-top:		95px;
-    color:			#fff;
-  }
-  .blue_right3 .mask {
-    width:			100%;
-    height:			100%;
-    position:		absolute;	/* 絶対位置指定 */
-    top:			0;
-    left:			0;
-    opacity:		0;	/* マスクを表示しない */
-    background-color:	rgba(0,0,0,0.4);	/* マスクは半透明 */
-    -webkit-transition:	all 0.2s ease;
-    transition:		all 0.2s ease;
-    border-radius:130px;
-  }
-  
-  .blue_right3:hover .mask {
-    opacity:		1;	/* マスクを表示する */
-  }
-  
-  .blue_right4{
-    position: relative;
-    width:180px;
-    height: 200px;
-    margin-top:-220px;
-    left:30%;
+    transition: 1.0s;
   }
 
-.blue_right4_2{
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin-top: -220px;
-  left: 70%;
-}
-
-  .blue_right4_2 .caption {
-    font-size:		110%;
-    text-align: 		center;
-    padding-top:		95px;
-    color:			#fff;
-  }
-  .blue_right4_2 .mask {
-    width:			100%;
-    height:			100%;
-    position:		absolute;	/* 絶対位置指定 */
-    top:			0;
-    left:			0;
-    opacity:		0;	/* マスクを表示しない */
-    background-color:	rgba(0,0,0,0.4);	/* マスクは半透明 */
-    -webkit-transition:	all 0.2s ease;
-    transition:		all 0.2s ease;
-    border-radius:130px;
-  }
-  
-  .blue_right4_2:hover .mask {
-    opacity:		1;	/* マスクを表示する */
-  }
-  
   .blue2_right1{
     width: 800px;
     position: relative;
     text-align: right;
     right:300px;
-  
   }
-  .blue2_right2{
-    width: 800px;
-    position: relative;
-    text-align: right;
-    right:240px;
-    top:-100px;
-    color: #262626;
+  .service_img {
+    position: fixed;
+    width:140px;
+    height:140px;
+    border-radius: 17px;
+  }
+  .service_img1 {
+    margin:0 25px;
+  }
+  .service_img2 {
+    margin:35px 225px;
+  }
+  .service_img3 {
+    margin:70px 425px;
+  }
+
+  .service_back_btn{
+    width: 54px;
+    height: 54px;
+    position: fixed;
+    right: 230px;
+    top: 85%;
+    cursor: pointer;
   }
   .blue2_right3{
   width:500px;
@@ -1187,10 +1064,10 @@ input[name="tab_item"] {
   border: color #262626;
   }
   .blue2_right_bg{
-  width:550px;
-  margin-top:-40px;
-  margin-right:10%;
-  float: right;
+    width:600px;
+    position: fixed;
+    right: 10%;
+    top: 28%;
   }
   .blue2_right4{
     width:550px;
@@ -1198,6 +1075,7 @@ input[name="tab_item"] {
     font-size:14px;
     font-weight:200;
     line-height: 22px;
+    height: 110px;
     }
   
 /*------------------------------------------------------------*/
