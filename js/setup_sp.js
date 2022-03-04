@@ -30,228 +30,112 @@ $(function () {
       $('.scroll').addClass('blur3');
     }
 
-    if (scroll < 500) {
-      $('.haikei5_sp').addClass('fade5dr20dl');
+    if (scroll < 1000) {
       $('.haikei5_sp').removeClass('opa5');
-    } else if (scroll < 1000) {
-      $('.haikei5_sp').removeClass('fade5dr20dl');
+      $('.haikei6_sp').addClass('opa5');
+    } else if (scroll < 2000) {
       $('.haikei5_sp').addClass('opa5');
+      $('.haikei6_sp').removeClass('opa5');
+      $('.haikei11_sp').addClass('opa5');
+      $('.service_title_sp').css({top: '0px'});
+      $('#golf_wear_sp').css({top: '80px'});
+      $('#graphic_design_sp').css({top: '130px'});
+      $('#ec_site_sp').css({top: '180px'});
+      $('#video_production_sp').css({top: '230px'});
+    } else if (scroll < 3000) {
+      $('.haikei6_sp').addClass('opa5');
+      $('.haikei11_sp').removeClass('opa5');
+      $('.haikei12_sp').addClass('opa5');
+    } else if (scroll < 4000) {
+      $('.haikei11_sp').addClass('opa5');
+      $('.haikei12_sp').removeClass('opa5');
     } 
 
   });
 
-  // $('.left2').on('click', function () {
-  //   $('.haikei6').addClass('opa5');
-  //   $('.haikei7').addClass('opa5');
-  //   $('.haikei8').addClass('opa5');
-  //   $('.haikei9').addClass('opa5');
-  //   $('.haikei10').addClass('opa5');
-  //   $('.haikei11').addClass('opa5');
-  //   $('.haikei12').addClass('opa5');
-  //   $('.haikei13').addClass('opa5');
-  //   $('.haikei5').removeClass('opa5');
-  //   $('.right_company').addClass('fade15dr0dl');
-  //   $('.right_sevice').removeClass('fade15dr0dl');
-  //   $('.right_news').removeClass('fade15dr0dl');
-  //   $('.right_contact').removeClass('fade15dr0dl');
-  //   $('.right_link').removeClass('fade15dr0dl');
-  //   $('#page1').addClass('bg_white');
-  //   $('#page1').removeClass('bg_blue');
-  //   $('#page1').removeClass('bg_green');
-  //   $('#page1').removeClass('bg_red');
-  //   $('#page1').removeClass('bg_black');
-  //   var elements = document.getElementsByClassName('button_p');
-  //   for (i = 0; i < elements.length; i++) {
-  //     elements[i].style.color = "#262626";
-  //   }
-  // });
+  $('#golf_wear_sp').on('click', function () {
+    $('.haikei6_sp').addClass('opa5');
+    $('.haikei7_sp').removeClass('opa5');
+    document.addEventListener('touchmove', disableScroll, { passive: false });
+    document.addEventListener('mousewheel', disableScroll, { passive: false });
+  });
 
-  // $('.left3').on('click', function () {
-  //   $('.haikei5').addClass('opa5');
-  //   $('.haikei7').addClass('opa5');
-  //   $('.haikei8').addClass('opa5');
-  //   $('.haikei9').addClass('opa5');
-  //   $('.haikei10').addClass('opa5');
-  //   $('.haikei11').addClass('opa5');
-  //   $('.haikei12').addClass('opa5');
-  //   $('.haikei13').addClass('opa5');
-  //   $('.haikei6').removeClass('opa5');
-  //   $('.right_company').removeClass('fade15dr0dl');
-  //   $('.right_sevice').addClass('fade15dr0dl');
-  //   $('.right_news').removeClass('fade15dr0dl');
-  //   $('.right_contact').removeClass('fade15dr0dl');
-  //   $('.right_link').removeClass('fade15dr0dl');
-  //   $('#page1').removeClass('bg_white');
-  //   $('#page1').addClass('bg_blue');
-  //   $('#page1').removeClass('bg_green');
-  //   $('#page1').removeClass('bg_red');
-  //   $('#page1').removeClass('bg_black');
-  //   var elements = document.getElementsByClassName('button_p');
-  //   for (i = 0; i < elements.length; i++) {
-  //     elements[i].style.color = "#FFFFFF";
-  //   }
-  // });
+  $('#graphic_design_sp').on('click', function () {
+    $('.haikei6_sp').addClass('opa5');
+    $('.haikei8_sp').removeClass('opa5');
+    document.addEventListener('touchmove', disableScroll, { passive: false });
+    document.addEventListener('mousewheel', disableScroll, { passive: false });
+  });
 
-  // $('.blue_right1').on('click', function () {
-  //   $('.haikei6').addClass('opa5');
-  //   $('.haikei8').addClass('opa5');
-  //   $('.haikei9').addClass('opa5');
-  //   $('.haikei10').addClass('opa5');
-  //   $('.haikei11').addClass('opa5');
-  //   $('.haikei12').addClass('opa5');
-  //   $('.haikei13').addClass('opa5');
-  //   $('.haikei7').removeClass('opa5');
-  //   $('.right_company').removeClass('fade15dr0dl');
-  //   $('.right_sevice').addClass('fade15dr0dl');
-  //   $('.right_news').removeClass('fade15dr0dl');
-  //   $('.right_contact').removeClass('fade15dr0dl');
-  //   $('.right_link').removeClass('fade15dr0dl');
-  // });
+  $('#ec_site_sp').on('click', function () {
+    $('.haikei6_sp').addClass('opa5');
+    $('.haikei9_sp').removeClass('opa5');
+    document.addEventListener('touchmove', disableScroll, { passive: false });
+    document.addEventListener('mousewheel', disableScroll, { passive: false });
+  });
 
-  // $('.blue_right2').on('click', function () {
-  //   $('.haikei6').addClass('opa5');
-  //   $('.haikei7').addClass('opa5');
-  //   $('.haikei9').addClass('opa5');
-  //   $('.haikei10').addClass('opa5');
-  //   $('.haikei11').addClass('opa5');
-  //   $('.haikei12').addClass('opa5');
-  //   $('.haikei13').addClass('opa5');
-  //   $('.haikei8').removeClass('opa5');
-  //   $('.right_company').removeClass('fade15dr0dl');
-  //   $('.right_sevice').addClass('fade15dr0dl');
-  //   $('.right_news').removeClass('fade15dr0dl');
-  //   $('.right_contact').removeClass('fade15dr0dl');
-  //   $('.right_link').removeClass('fade15dr0dl');
-  // });
+  $('#video_production_sp').on('click', function () {
+    $('.haikei6_sp').addClass('opa5');
+    $('.haikei10_sp').removeClass('opa5');
+    document.addEventListener('touchmove', disableScroll, { passive: false });
+    document.addEventListener('mousewheel', disableScroll, { passive: false });
+  });
 
-  // $('.blue_right3').on('click', function () {
-  //   $('.haikei6').addClass('opa5');
-  //   $('.haikei7').addClass('opa5');
-  //   $('.haikei8').addClass('opa5');
-  //   $('.haikei10').addClass('opa5');
-  //   $('.haikei11').addClass('opa5');
-  //   $('.haikei12').addClass('opa5');
-  //   $('.haikei13').addClass('opa5');
-  //   $('.haikei9').removeClass('opa5');
-  //   $('.right_company').removeClass('fade15dr0dl');
-  //   $('.right_sevice').addClass('fade15dr0dl');
-  //   $('.right_news').removeClass('fade15dr0dl');
-  //   $('.right_contact').removeClass('fade15dr0dl');
-  //   $('.right_link').removeClass('fade15dr0dl');
-  // });
+  $('.service_back_btn_sp').on('click', function () {
+    $('.haikei6_sp').removeClass('opa5');
+    $('.haikei7_sp').addClass('opa5');
+    $('.haikei8_sp').addClass('opa5');
+    $('.haikei9_sp').addClass('opa5');
+    $('.haikei10_sp').addClass('opa5');
+    document.removeEventListener('touchmove', disableScroll, { passive: false });
+    document.removeEventListener('mousewheel', disableScroll, { passive: false });
+  });
 
-  // $('.blue_right4').on('click', function () {
-  //   $('.haikei6').addClass('opa5');
-  //   $('.haikei7').addClass('opa5');
-  //   $('.haikei8').addClass('opa5');
-  //   $('.haikei9').addClass('opa5');
-  //   $('.haikei11').addClass('opa5');
-  //   $('.haikei12').addClass('opa5');
-  //   $('.haikei13').addClass('opa5');
-  //   $('.haikei10').removeClass('opa5');
-  //   $('.right_company').removeClass('fade15dr0dl');
-  //   $('.right_sevice').addClass('fade15dr0dl');
-  //   $('.right_news').removeClass('fade15dr0dl');
-  //   $('.right_contact').removeClass('fade15dr0dl');
-  //   $('.right_link').removeClass('fade15dr0dl');
-  // });
+  function disableScroll(event) {
+    event.preventDefault();
+  }
 
-  // $('.service_back_btn').on('click', function () {
-  //   $('.haikei5').addClass('opa5');
-  //   $('.haikei7').addClass('opa5');
-  //   $('.haikei8').addClass('opa5');
-  //   $('.haikei9').addClass('opa5');
-  //   $('.haikei10').addClass('opa5');
-  //   $('.haikei11').addClass('opa5');
-  //   $('.haikei12').addClass('opa5');
-  //   $('.haikei13').addClass('opa5');
-  //   $('.haikei6').removeClass('opa5');
-  //   $('.right_company').removeClass('fade15dr0dl');
-  //   $('.right_sevice').addClass('fade15dr0dl');
-  //   $('.right_news').removeClass('fade15dr0dl');
-  //   $('.right_contact').removeClass('fade15dr0dl');
-  //   $('.right_link').removeClass('fade15dr0dl');
-  // });
+  let page = 1;
 
-  // $('.left4').on('click', function () {
-  //   $('.haikei5').addClass('opa5');
-  //   $('.haikei6').addClass('opa5');
-  //   $('.haikei7').addClass('opa5');
-  //   $('.haikei8').addClass('opa5');
-  //   $('.haikei9').addClass('opa5');
-  //   $('.haikei10').addClass('opa5');
-  //   $('.haikei12').addClass('opa5');
-  //   $('.haikei13').addClass('opa5');
-  //   $('.haikei11').removeClass('opa5');
-  //   $('.right_bg').addClass('fade15dr0dl');
-  //   $('.right_company').removeClass('fade15dr0dl');
-  //   $('.right_sevice').removeClass('fade15dr0dl');
-  //   $('.right_news').addClass('fade15dr0dl');
-  //   $('.right_contact').removeClass('fade15dr0dl');
-  //   $('.right_link').removeClass('fade15dr0dl');
-  //   $('#page1').removeClass('bg_white');
-  //   $('#page1').removeClass('bg_blue');
-  //   $('#page1').addClass('bg_green');
-  //   $('#page1').removeClass('bg_red');
-  //   $('#page1').removeClass('bg_black');
-  //   var elements = document.getElementsByClassName('button_p');
-  //   for (i = 0; i < elements.length; i++) {
-  //     elements[i].style.color = "#FFFFFF";
-  //   }
-  // });
+  $.ajax({
+    type: "GET",
+    url: "news_list_get_sp.php",
+    data: { "page" : page },
+    dataType : "json",
+  }).done(function(data){
+    if (data) {
+      $('.news_div_sp').html(data);
+      $('.news_back_btn').addClass('opa5');
+    } else {
+      console.log(data)
+    }
+  }).fail(function(XMLHttpRequest, status, e){
+    alert("ニュースの取得に失敗しました");
+    console.log(e)
+  });
 
-  // $('.left5').on('click', function () {
-  //   $('.haikei5').addClass('opa5');
-  //   $('.haikei6').addClass('opa5');
-  //   $('.haikei7').addClass('opa5');
-  //   $('.haikei8').addClass('opa5');
-  //   $('.haikei9').addClass('opa5');
-  //   $('.haikei10').addClass('opa5');
-  //   $('.haikei11').addClass('opa5');
-  //   $('.haikei13').addClass('opa5');
-  //   $('.haikei12').removeClass('opa5');
-  //   $('.right_bg').addClass('fade15dr0dl');
-  //   $('.right_company').removeClass('fade15dr0dl');
-  //   $('.right_sevice').removeClass('fade15dr0dl');
-  //   $('.right_news').removeClass('fade15dr0dl');
-  //   $('.right_contact').addClass('fade15dr0dl');
-  //   $('.right_link').removeClass('fade15dr0dl');
-  //   $('#page1').removeClass('bg_white');
-  //   $('#page1').removeClass('bg_blue');
-  //   $('#page1').removeClass('bg_green');
-  //   $('#page1').addClass('bg_red');
-  //   $('#page1').removeClass('bg_black');
-  //   var elements = document.getElementsByClassName('button_p');
-  //   for (i = 0; i < elements.length; i++) {
-  //     elements[i].style.color = "#FFFFFF";
-  //   }
-  // });
 
-  // $('.left6').on('click', function () {
-  //   $('.haikei5').addClass('opa5');
-  //   $('.haikei6').addClass('opa5');
-  //   $('.haikei7').addClass('opa5');
-  //   $('.haikei8').addClass('opa5');
-  //   $('.haikei9').addClass('opa5');
-  //   $('.haikei10').addClass('opa5');
-  //   $('.haikei11').addClass('opa5');
-  //   $('.haikei12').addClass('opa5');
-  //   $('.haikei13').removeClass('opa5');
-  //   $('.right_bg').addClass('fade15dr0dl');
-  //   $('.right_company').removeClass('fade15dr0dl');
-  //   $('.right_sevice').removeClass('fade15dr0dl');
-  //   $('.right_news').removeClass('fade15dr0dl');
-  //   $('.right_contact').removeClass('fade15dr0dl');
-  //   $('.right_link').addClass('fade15dr0dl');
-  //   $('#page1').removeClass('bg_white');
-  //   $('#page1').removeClass('bg_blue');
-  //   $('#page1').removeClass('bg_green');
-  //   $('#page1').removeClass('bg_red');
-  //   $('#page1').addClass('bg_black');
-  //   var elements = document.getElementsByClassName('button_p');
-  //   for (i = 0; i < elements.length; i++) {
-  //     elements[i].style.color = "#FFFFFF";
-  //   }
-  // });
+
 });
 
+
+function clickNewsSp(id) {
+  $.ajax({
+    type: "GET",
+    url: "news_detail_get_sp.php",
+    data: {
+      "id": id
+    },
+    dataType: "json",
+  }).done(function (data) {
+    if (data) {
+      $('.news_div_sp').html(data);
+      $('.news_back_btn_sp').removeClass('opa5');
+    } else {
+      console.log(data)
+    }
+  }).fail(function (XMLHttpRequest, status, e) {
+    alert("ニュースの取得に失敗しました");
+    console.log(e)
+  });
+}

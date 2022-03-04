@@ -48,7 +48,7 @@ $(function () {
     $('.news_back_btn').addClass('opa5');
     $('.haikei5').removeClass('opa5');
     $('.right_company').addClass('fade15dr0dl');
-    $('.right_sevice').removeClass('fade15dr0dl');
+    $('.right_service').removeClass('fade15dr0dl');
     $('.right_news').removeClass('fade15dr0dl');
     $('.right_contact').removeClass('fade15dr0dl');
     $('.right_link').removeClass('fade15dr0dl');
@@ -73,7 +73,7 @@ $(function () {
     $('.news_back_btn').addClass('opa5');
     $('.haikei6').removeClass('opa5');
     $('.right_company').removeClass('fade15dr0dl');
-    $('.right_sevice').addClass('fade15dr0dl');
+    $('.right_service').addClass('fade15dr0dl');
     $('.right_news').removeClass('fade15dr0dl');
     $('.right_contact').removeClass('fade15dr0dl');
     $('.right_link').removeClass('fade15dr0dl');
@@ -92,7 +92,7 @@ $(function () {
     $('.haikei11').removeClass('opa5');
     $('.right_bg').addClass('fade15dr0dl');
     $('.right_company').removeClass('fade15dr0dl');
-    $('.right_sevice').removeClass('fade15dr0dl');
+    $('.right_service').removeClass('fade15dr0dl');
     $('.right_news').addClass('fade15dr0dl');
     $('.right_contact').removeClass('fade15dr0dl');
     $('.right_link').removeClass('fade15dr0dl');
@@ -110,7 +110,7 @@ $(function () {
     $('.news_back_btn').addClass('opa5');
     $('.haikei12').removeClass('opa5');
     $('.right_company').removeClass('fade15dr0dl');
-    $('.right_sevice').removeClass('fade15dr0dl');
+    $('.right_service').removeClass('fade15dr0dl');
     $('.right_news').removeClass('fade15dr0dl');
     $('.right_link').removeClass('fade15dr0dl');
 
@@ -129,7 +129,7 @@ $(function () {
     $('.haikei13').removeClass('opa5');
     $('.right_bg').addClass('fade15dr0dl');
     $('.right_company').removeClass('fade15dr0dl');
-    $('.right_sevice').removeClass('fade15dr0dl');
+    $('.right_service').removeClass('fade15dr0dl');
     $('.right_news').removeClass('fade15dr0dl');
     $('.right_contact').removeClass('fade15dr0dl');
     $('.right_link').addClass('fade15dr0dl');
@@ -479,7 +479,6 @@ function clickNews(id) {
     dataType: "json",
   }).done(function (data) {
     if (data) {
-      console.log(data)
       $('.news_div').html(data);
       $('.news_back_btn').removeClass('opa5');
     } else {
