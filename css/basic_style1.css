@@ -385,7 +385,7 @@ transition: .6s;
   top:0;
 }
 
-.haikei5_sp, .haikei6_sp, .haikei7_sp, .haikei8_sp, .haikei9_sp, .haikei10_sp, .haikei11_sp, .haikei12_sp {
+.haikei5_sp, .haikei6_sp, .haikei7_sp, .haikei8_sp, .haikei9_sp, .haikei10_sp, .haikei11_sp, .haikei12_sp, .haikei13_sp {
   transition: 0.6s;
 }
 
@@ -516,6 +516,39 @@ transition: .6s;
   right: 140px;
 }
 
+#send_button_sp {
+  position: fixed;
+  width: 60px;
+  bottom: 12%;
+  right: 20px;
+}
+
+.contact_div_sp {
+  padding: 0 10px;
+}
+
+.link_content_sp {
+  text-align: center;
+}
+
+.link_sp1, .link_sp2, .link_sp3, .link_sp4 {
+  position: relative;
+  transition: .6s;
+}
+.link_sp1 {
+  font-size:18px;
+}
+.link_sp2 {
+  font-size:11px;
+}
+.link_sp3, .link_sp4 {
+  font-size:15px;
+}
+
+.link_content_sp a {
+  color:#505050;
+}
+
 .logo1{
   margin: 0;
   position: absolute;
@@ -523,7 +556,6 @@ transition: .6s;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%) 
-  /* left: 28%; */
 }
 .scroll{
   position: relative;

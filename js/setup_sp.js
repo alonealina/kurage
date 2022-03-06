@@ -29,7 +29,6 @@ $(function () {
       $('.scroll').removeClass('fade5dr20dl');
       $('.scroll').addClass('blur3');
     }
-
     if (scroll < 1000) {
       $('.haikei5_sp').removeClass('opa5');
       $('.haikei6_sp').addClass('opa5');
@@ -37,11 +36,6 @@ $(function () {
       $('.haikei5_sp').addClass('opa5');
       $('.haikei6_sp').removeClass('opa5');
       $('.haikei11_sp').addClass('opa5');
-      $('.service_title_sp').css({top: '0px'});
-      $('#golf_wear_sp').css({top: '80px'});
-      $('#graphic_design_sp').css({top: '130px'});
-      $('#ec_site_sp').css({top: '180px'});
-      $('#video_production_sp').css({top: '230px'});
     } else if (scroll < 3000) {
       $('.haikei6_sp').addClass('opa5');
       $('.haikei11_sp').removeClass('opa5');
@@ -49,7 +43,38 @@ $(function () {
     } else if (scroll < 4000) {
       $('.haikei11_sp').addClass('opa5');
       $('.haikei12_sp').removeClass('opa5');
-    } 
+      $('.haikei13_sp').addClass('opa5');
+    } else if (scroll < 5000) {
+      $('.haikei12_sp').addClass('opa5');
+      $('.haikei13_sp').removeClass('opa5');
+
+    }
+
+    if (scroll < 1000) {
+      $('.service_title_sp').css({top: '700px'});
+      $('#golf_wear_sp').css({top: '700px'});
+      $('#graphic_design_sp').css({top: '700px'});
+      $('#ec_site_sp').css({top: '700px'});
+      $('#video_production_sp').css({top: '700px'});
+    } else {
+      $('.service_title_sp').css({top: '0px'});
+      $('#golf_wear_sp').css({top: '80px'});
+      $('#graphic_design_sp').css({top: '130px'});
+      $('#ec_site_sp').css({top: '180px'});
+      $('#video_production_sp').css({top: '230px'});
+    }
+
+    if (scroll < 4000) {
+      $('.link_sp1').css({top: '700px'});
+      $('.link_sp2').css({top: '700px'});
+      $('.link_sp3').css({top: '700px'});
+      $('.link_sp4').css({top: '700px'});
+    } else {
+      $('.link_sp1').css({top: '50px'});
+      $('.link_sp2').css({top: '100px'});
+      $('.link_sp3').css({top: '150px'});
+      $('.link_sp4').css({top: '200px'});
+    }
 
   });
 
