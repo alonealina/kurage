@@ -32,19 +32,31 @@ $(function () {
     if (scroll < 1000) {
       $('.haikei5_sp').removeClass('opa5');
       $('.haikei6_sp').addClass('opa5');
+      $('.haikei11_sp').addClass('opa5');
+      $('.haikei12_sp').addClass('opa5');
+      $('.haikei13_sp').addClass('opa5');
     } else if (scroll < 2000) {
       $('.haikei5_sp').addClass('opa5');
       $('.haikei6_sp').removeClass('opa5');
       $('.haikei11_sp').addClass('opa5');
+      $('.haikei12_sp').addClass('opa5');
+      $('.haikei13_sp').addClass('opa5');
     } else if (scroll < 3000) {
+      $('.haikei5_sp').addClass('opa5');
       $('.haikei6_sp').addClass('opa5');
       $('.haikei11_sp').removeClass('opa5');
+      $('.haikei13_sp').addClass('opa5');
       $('.haikei12_sp').addClass('opa5');
     } else if (scroll < 4000) {
+      $('.haikei5_sp').addClass('opa5');
+      $('.haikei6_sp').addClass('opa5');
       $('.haikei11_sp').addClass('opa5');
       $('.haikei12_sp').removeClass('opa5');
       $('.haikei13_sp').addClass('opa5');
-    } else if (scroll < 5000) {
+    } else {
+      $('.haikei5_sp').addClass('opa5');
+      $('.haikei6_sp').addClass('opa5');
+      $('.haikei11_sp').addClass('opa5');
       $('.haikei12_sp').addClass('opa5');
       $('.haikei13_sp').removeClass('opa5');
 
@@ -76,6 +88,26 @@ $(function () {
       $('.link_sp4').css({top: '200px'});
     }
 
+  });
+
+  $('#menu_company').on('click', function () {
+    document.documentElement.scrollTop = 500;
+  });
+
+  $('#menu_service').on('click', function () {
+    document.documentElement.scrollTop = 1500;
+  });
+
+  $('#menu_news').on('click', function () {
+    document.documentElement.scrollTop = 2500;
+  });
+
+  $('#menu_contact').on('click', function () {
+    document.documentElement.scrollTop = 3500;
+  });
+
+  $('#menu_link').on('click', function () {
+    document.documentElement.scrollTop = 4500;
   });
 
   $('#golf_wear_sp').on('click', function () {
@@ -139,10 +171,7 @@ $(function () {
     console.log(e)
   });
 
-
-
 });
-
 
 function clickNewsSp(id) {
   $.ajax({
@@ -164,3 +193,17 @@ function clickNewsSp(id) {
     console.log(e)
   });
 }
+
+$(function() {  
+  $('.hamburger').click(function() {
+    $(this).toggleClass('active');
+
+    if ($(this).hasClass('active')) {
+      $('.global_menu_sp').removeClass('opa5');       
+      $('.global_menu_sp').addClass('menu_active');
+    } else {
+      $('.global_menu_sp').removeClass('menu_active');
+      $('.global_menu_sp').addClass('opa5');   
+    }
+  });
+});
