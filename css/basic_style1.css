@@ -11,7 +11,6 @@ a {
 
 button {
   font-size: 1.0em;
-  /* 2 */
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -44,162 +43,6 @@ body {
   margin: 0;
 }
 
-.bg_white {
-  width: 100%;
-  min-height: 100vh;
-  font-family: Helvetica, sans-serif;
-  /* 1 */
-  color: #262626;
-  z-index: 1;
-}
-
-.menu-btn {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  display: flex;
-  height: 60px;
-  width: 60px;
-  justify-content: center;
-  align-items: center;
-  z-index: 90;
-}
-
-.menu-btn span, .menu-btn span:before, .menu-btn span:after {
-  content: '';
-  display: block;
-  height: 3px;
-  width: 25px;
-  border-radius: 3px;
-  background-color: #262626;
-  position: absolute;
-}
-
-.menu-btn span:before {
-  bottom: 8px;
-}
-
-.menu-btn span:after {
-  top: 8px;
-}
-
-#menu-btn-check:checked~.menu-btn span {
-  background-color: rgba(255, 255, 255, 0);
-  /*メニューオープン時は真ん中の線を透明にする*/
-}
-
-#menu-btn-check:checked~.menu-btn span::before {
-  bottom: 0;
-  transform: rotate(45deg);
-}
-
-#menu-btn-check:checked~.menu-btn span::after {
-  top: 0;
-  transform: rotate(-45deg);
-}
-
-#menu-btn-check {
-  display: none;
-}
-
-.menu-content ul {
-  padding: 70px 10px 0;
-}
-
-.menu-content ul li {
-  list-style: none;
-}
-
-.menu-content ul li a {
-  display: block;
-  width: 100%;
-  font-size: 15px;
-  text-decoration: none;
-  padding: 9px 15px 10px 0;
-  position: relative;
-}
-
-.menu-content ul li a::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  /*border-top: solid 2px #ffffff;
-    border-right: solid 2px #ffffff;
-    transform: rotate(45deg);*/
-  position: absolute;
-  right: 11px;
-  top: 16px;
-}
-
-.menu-content {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 100%;
-  /*leftの値を変更してメニューを画面外へ*/
-  z-index: 80;
-  background-color: #D9D9D9;
-  opacity: 0.7;
-  transition: all 0.5s;
-  /*アニメーション設定*/
-}
-
-.menu-content ul {
-  padding: 70px 10px 0;
-}
-
-.menu-content ul li {
-  border-bottom: solid 1px #262626;
-  list-style: none;
-}
-
-.menu-content ul li a {
-  display: block;
-  width: 100%;
-  font-size: 15px;
-  box-sizing: border-box;
-  color: #262626;
-  text-decoration: none;
-  padding: 9px 15px 10px 0;
-  position: relative;
-}
-
-.menu-content ul li a::before {
-  content: "";
-  width: 7px;
-  height: 7px;
-  /*border-top: solid 2px #ffffff;
-    border-right: solid 2px #ffffff;
-    transform: rotate(45deg);*/
-  position: absolute;
-  right: 11px;
-  top: 16px;
-}
-
-#menu-btn-check:checked~.menu-content {
-  left: 0;
-  /*メニューを画面内へ*/
-}
-
-.sp_logo1 {
-  position: absolute;
-  width: 300px;
-}
-
-div.container4 {
-  height: 100vh;
-  position: relative
-}
-
-div.container4 img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
-}
-
 .scroll {
   position: fixed;
   bottom: 10px;
@@ -219,124 +62,28 @@ div.container4 img {
   font-size: 14px;
 }
 
-.right1 {
-  width: 370px;
-  text-align: right;
-}
-
-.area {
-  width: 370px;
-  margin: auto;
-  flex-wrap: wrap;
-  display: flex;
-}
-
-.tab_class {
-  width: 185px;
-  height: 50px;
-  background: none;
-  border-bottom: solid;
-  border-width: 1px;
-  border-color: #CECECE;
-  line-height: 50px;
-  font-size: 15px;
-  text-align: center;
-  display: inline;
-  float: right;
-  order: -1;
-}
-
-input[name="tab_name"] {
-  display: none;
-}
-
-input:checked+.tab_class {
-  border-color: #262626;
-  color: #262626;
-}
-
-.content_class {
-  display: none;
-  width: 100%;
-}
-
-input:checked+.tab_class+.content_class {
-  display: block;
-}
-
 body {
   z-index: 1;
   margin: 0;
-  /*overflow: hidden;*/
 }
 
-
-/* bg
-========================================================================== */
-
-.bg_white {
+.bg_main {
   width: 100%;
+  min-height: 100vh;
   height: 1000px;
   font-family: Helvetica, sans-serif;
-  /* 1 */
   color: #262626;
   transition: .6s;
+  z-index: 1;
 }
 
-.bg_white_sp {
+.bg_main_sp {
   width: 100%;
   height: 100%;
   font-family: Helvetica, sans-serif;
-  /* 1 */
   color: #505050;
   transition: .6s;
 }
-
-.bg_blue {
-  z-index: 1;
-  width: 100%;
-  height: 1000px;
-  background: linear-gradient(70deg, rgba(40, 75, 188, 1) 0%, rgba(40, 75, 188, 1) 22%, rgba(35, 75, 199, 1) 39%, rgba(20, 65, 208, 1) 55%, rgba(18, 53, 163, 1) 76%, rgba(29, 53, 124, 1) 100%);
-  color: #ffffff;
-  transition: .6s;
-}
-
-.bg_green {
-  width: 100%;
-  height: 980px;
-  background: transparent linear-gradient(162deg, #37BF47 0%, #49CC57 20%, #39C948 42%, #26B235 68%, #199327 100%) 0% 0% no-repeat padding-box;
-  font-family: Helvetica, sans-serif;
-  /* 1 */
-  color: white;
-  transition: .6s;
-}
-
-.bg_red {
-  width: 100%;
-  height: 980px;
-  background: transparent linear-gradient(202deg, #B73131 0%, #C32C2C 21%, #B12626 38%, #C12121 62%, #A82121 84%, #831313 100%) 0% 0% no-repeat padding-box;
-  font-family: Helvetica, sans-serif;
-  /* 1 */
-  color: white;
-  transition: .6s;
-}
-
-.bg_black {
-  width: 100%;
-  height: 980px;
-  background: transparent linear-gradient(180deg, #141212 0%, #2E2C2C 29%, #333131 51%, #403F3F 76%, #535353 100%) 0% 0% no-repeat padding-box;
-  font-family: Helvetica, sans-serif;
-  /* 1 */
-  color: white;
-  transition: .6s;
-}
-
-
-/*------------------------------------------------------------*/
-
-
-/* new
-========================================================================== */
 
 .right_title_company, .right_title_service, .right_title_news, .right_title_contact, .right_title_link {
   font: normal normal normal 50px/54px HiraginoKaku W6;
@@ -517,13 +264,9 @@ body {
   transition: .6s;
 }
 
-.opa5 {
+.none {
   opacity: 0;
   pointer-events: none;
-}
-
-.opa6 {
-  opacity: 1;
 }
 
 .top_btn {
@@ -771,10 +514,6 @@ body {
   animation: fadeIn 0.5s ease 2.0s 1 backwards;
 }
 
-.fade5 {
-  animation: fadeIn2 1.5s ease 0.0s 1 both;
-}
-
 @keyframes fadeIn {
   0% {
     opacity: 0
@@ -833,68 +572,6 @@ body {
   40%, 100% {
     opacity: 1;
   }
-}
-
-.sa1 {
-  opacity: 0;
-  transition: all .5s ease;
-}
-
-.sa2 {
-  opacity: 0;
-  transition: all 1.5s ease;
-}
-
-.sa3 {
-  opacity: 0;
-  transition: all 2.0s ease;
-}
-
-.sa4 {
-  opacity: 0;
-  transition: all 2.5s ease;
-}
-
-.sa5 {
-  opacity: 0;
-  transition: all 3.0s ease;
-}
-
-.sa .show {
-  opacity: 1;
-  transform: none;
-}
-
-.sa--lr {
-  transform: translate(-100px, 0);
-}
-
-.sa--rl {
-  transform: translate(100px, 0);
-}
-
-.sa--up {
-  transform: translate(0, 100px);
-}
-
-.sa--down {
-  transform: translate(0, -100px);
-}
-
-.sa--scaleUp {
-  transform: scale(.5);
-}
-
-.sa--scaleDown {
-  transform: scale(1.5);
-}
-
-.sa--rotateL {
-  transform: rotate(180deg);
-}
-
-.sa--rotateR {
-  transform: rotate(-180deg);
 }
 
 
@@ -958,7 +635,8 @@ input[name="tab_item"] {
 
 /*選択されているタブのコンテンツのみを表示*/
 
-#profile:checked~#profile_content, #profile_sp:checked~#profile_content_sp, #history:checked~#history_content, #history_sp:checked~#history_content_sp, #design:checked~#design_content {
+#profile:checked~#profile_content, #profile_sp:checked~#profile_content_sp, 
+#history:checked~#history_content, #history_sp:checked~#history_content_sp {
   display: block;
   color: #262626;
 }
@@ -1048,13 +726,6 @@ input[name="tab_item"] {
   height: 25px;
 }
 
-.company_column {
-  width: 95%;
-  margin: 25px 0;
-  display: flex;
-  height: 25px;
-}
-
 .company_profile {
   width: 29%;
   font: normal normal normal 20px/22px HiraginoKaku W3;
@@ -1089,7 +760,7 @@ input[name="tab_item"] {
   width: 120%;
 }
 
-.flex3 {
+.news_div {
   margin-top: 17px;
   width: 600px;
   text-align: right;
@@ -1138,7 +809,7 @@ input[name="tab_item"] {
   border-color: #FFF;
 }
 
-.red_right2 {
+.title_div {
   width: 600px;
   display: flex;
   justify-content: space-between;
@@ -1165,7 +836,7 @@ input[name="tab_item"] {
   transition: 0.6s;
 }
 
-.news_right3 {
+.news_column {
   width: 560px;
   margin: 10px 20px;
   text-align: left;
@@ -1213,7 +884,7 @@ input[name="tab_item"] {
   font: normal normal normal 15px/20px Hiragino Sans;
 }
 
-.blue_right_bg {
+.service_menu {
   width: 50%;
   position: fixed;
   top: 18%;
@@ -1221,7 +892,7 @@ input[name="tab_item"] {
   z-index: 4;
 }
 
-.blue_right_bg2 {
+.service_content {
   width: 50%;
   position: fixed;
   top: 32%;
@@ -1229,21 +900,15 @@ input[name="tab_item"] {
   z-index: 4;
 }
 
-.blue_right1, .blue_right2, .blue_right3, .blue_right4 {
+.service_menu1, .service_menu2, .service_menu3, .service_menu4 {
   width: 350px;
+  cursor: pointer;
   text-align: center;
   font: normal normal normal 30px/33px HiraginoKaku W3;
   top: 600px;
   margin-left: 200px;
   position: relative;
   transition: 1.0s;
-}
-
-.blue2_right1 {
-  width: 800px;
-  position: relative;
-  text-align: right;
-  right: 300px;
 }
 
 .service_img {
@@ -1274,22 +939,14 @@ input[name="tab_item"] {
   cursor: pointer;
 }
 
-.blue2_right3 {
-  width: 500px;
-  text-align: left;
-  border-bottom: solid;
-  border-width: 1px;
-  border: color #262626;
-}
-
-.blue2_right_bg {
+.service_div {
   width: 600px;
   position: fixed;
   right: 10%;
   top: 28%;
 }
 
-.blue2_right4 {
+.service_text {
   width: 550px;
   text-align: left;
   font-size: 14px;
@@ -1335,17 +992,13 @@ input[name="tab_item"] {
     position: fixed;
     top: 45%;
     left: 4%;
-    /* display: flex; */
   }
   .left2 p {
     z-index: 2;
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-770px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
   }
   .left3 {
     z-index: 2;
@@ -1356,12 +1009,9 @@ input[name="tab_item"] {
   .left3 p {
     z-index: 2;
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-780px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
   }
   .left4 {
     z-index: 2;
@@ -1372,12 +1022,9 @@ input[name="tab_item"] {
   .left4 p {
     z-index: 2;
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-480px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
   }
   .left5 {
     z-index: 2;
@@ -1388,12 +1035,9 @@ input[name="tab_item"] {
   .left5 p {
     z-index: 2;
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-460px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
   }
   .left6 {
     z-index: 2;
@@ -1404,12 +1048,9 @@ input[name="tab_item"] {
   .left6 p {
     z-index: 2;
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-500px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
     z-index: 3;
   }
 }
@@ -1426,17 +1067,13 @@ input[name="tab_item"] {
     position: fixed;
     top: 57%;
     left: 5%;
-    /* display: flex; */
   }
   .left2 p {
     z-index: 2;
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-770px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
     color: #262626;
   }
   .left3 {
@@ -1448,12 +1085,9 @@ input[name="tab_item"] {
   .left3 p {
     z-index: 2;
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-780px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
     color: #262626;
   }
   .left4 {
@@ -1465,12 +1099,9 @@ input[name="tab_item"] {
   .left4 p {
     z-index: 2;
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-480px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
     color: #262626;
   }
   .left5 {
@@ -1480,12 +1111,9 @@ input[name="tab_item"] {
   }
   .left5 p {
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-460px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
     color: #262626;
   }
   .left6 {
@@ -1495,12 +1123,9 @@ input[name="tab_item"] {
   }
   .left6 p {
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-500px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
     color: #262626;
     z-index: 3;
   }
@@ -1516,16 +1141,12 @@ input[name="tab_item"] {
     position: fixed;
     top: 66%;
     left: 3%;
-    /* display: flex; */
   }
   .left2 p {
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-770px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
     color: #262626;
   }
   .left3 {
@@ -1535,12 +1156,9 @@ input[name="tab_item"] {
   }
   .left3 p {
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-780px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
     color: #262626;
   }
   .left4 {
@@ -1550,12 +1168,9 @@ input[name="tab_item"] {
   }
   .left4 p {
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-480px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
     color: #262626;
   }
   .left5 {
@@ -1565,12 +1180,9 @@ input[name="tab_item"] {
   }
   .left5 p {
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-460px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
     color: #262626;
   }
   .left6 {
@@ -1580,12 +1192,9 @@ input[name="tab_item"] {
   }
   .left6 p {
     font-size: 1.1em;
-    /* 2 */
     font-weight: 100;
     font-style: italic;
-    /* margin-left:-500px; */
     font-family: Helvetica, sans-serif;
-    /* 1 */
     color: #262626;
     z-index: 3;
   }
@@ -1593,12 +1202,6 @@ input[name="tab_item"] {
 
 
 /*------------------------------------------------------------*/
-
-.form {
-  display: inline;
-  width: 100%;
-  text-align: center;
-}
 
 select {
   font-size: 23pt;
@@ -1610,67 +1213,9 @@ select {
   border: none;
 }
 
-
-/* 回転するアニメーション */
-
-@keyframes fuwafuwa {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-
-/* このクラスをつけると回転を無限に繰り返します */
-
-.anime-fuwafuwa {
-  animation: 3s fuwafuwa infinite;
-}
-
-
-/* 回転するアニメーション */
-
-@keyframes fuwafuwa2 {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-
-/* このクラスをつけると回転を無限に繰り返します */
-
-.anime-fuwafuwa2 {
-  animation: 5s fuwafuwa2 infinite;
-}
-
-
-/* 回転するアニメーション */
-
-@keyframes fuwafuwa3 {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-
-/* このクラスをつけると回転を無限に繰り返します */
-
-.anime-fuwafuwa3 {
-  animation: 3.5s fuwafuwa2 infinite;
-}
-
 .mail_input {
   width: 430px;
   font-family: Helvetica, sans-serif;
-  /* 1 */
   font-weight: 100;
   font-style: italic;
   margin-left: 30px;
@@ -1685,7 +1230,6 @@ select {
 .mail_input_sp {
   width: 96%;
   font-family: Helvetica, sans-serif;
-  /* 1 */
   font-weight: 100;
   font-style: italic;
   background: white;
@@ -1701,7 +1245,6 @@ input::placeholder, textarea::placeholder {
   color: #CBCBCB;
   font-family: Helvetica, sans-serif;
   font-size: 1em;
-  /* 2 */
   font-weight: 300;
   font-style: normal;
 }
@@ -1753,12 +1296,6 @@ input::placeholder, textarea::placeholder {
   100% {
     transform: rotate(360deg);
   }
-}
-
-.form {
-  display: inline;
-  width: 100%;
-  text-align: center;
 }
 
 select {

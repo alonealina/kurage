@@ -30,35 +30,35 @@ $(function () {
       $('.scroll').addClass('blur3');
     }
     if (scroll < 1000) {
-      $('.haikei5_sp').removeClass('opa5');
-      $('.haikei6_sp').addClass('opa5');
-      $('.haikei11_sp').addClass('opa5');
-      $('.haikei12_sp').addClass('opa5');
-      $('.haikei13_sp').addClass('opa5');
+      $('.haikei5_sp').removeClass('none');
+      $('.haikei6_sp').addClass('none');
+      $('.haikei11_sp').addClass('none');
+      $('.haikei12_sp').addClass('none');
+      $('.haikei13_sp').addClass('none');
     } else if (scroll < 2000) {
-      $('.haikei5_sp').addClass('opa5');
-      $('.haikei6_sp').removeClass('opa5');
-      $('.haikei11_sp').addClass('opa5');
-      $('.haikei12_sp').addClass('opa5');
-      $('.haikei13_sp').addClass('opa5');
+      $('.haikei5_sp').addClass('none');
+      $('.haikei6_sp').removeClass('none');
+      $('.haikei11_sp').addClass('none');
+      $('.haikei12_sp').addClass('none');
+      $('.haikei13_sp').addClass('none');
     } else if (scroll < 3000) {
-      $('.haikei5_sp').addClass('opa5');
-      $('.haikei6_sp').addClass('opa5');
-      $('.haikei11_sp').removeClass('opa5');
-      $('.haikei13_sp').addClass('opa5');
-      $('.haikei12_sp').addClass('opa5');
+      $('.haikei5_sp').addClass('none');
+      $('.haikei6_sp').addClass('none');
+      $('.haikei11_sp').removeClass('none');
+      $('.haikei13_sp').addClass('none');
+      $('.haikei12_sp').addClass('none');
     } else if (scroll < 4000) {
-      $('.haikei5_sp').addClass('opa5');
-      $('.haikei6_sp').addClass('opa5');
-      $('.haikei11_sp').addClass('opa5');
-      $('.haikei12_sp').removeClass('opa5');
-      $('.haikei13_sp').addClass('opa5');
+      $('.haikei5_sp').addClass('none');
+      $('.haikei6_sp').addClass('none');
+      $('.haikei11_sp').addClass('none');
+      $('.haikei12_sp').removeClass('none');
+      $('.haikei13_sp').addClass('none');
     } else {
-      $('.haikei5_sp').addClass('opa5');
-      $('.haikei6_sp').addClass('opa5');
-      $('.haikei11_sp').addClass('opa5');
-      $('.haikei12_sp').addClass('opa5');
-      $('.haikei13_sp').removeClass('opa5');
+      $('.haikei5_sp').addClass('none');
+      $('.haikei6_sp').addClass('none');
+      $('.haikei11_sp').addClass('none');
+      $('.haikei12_sp').addClass('none');
+      $('.haikei13_sp').removeClass('none');
 
     }
 
@@ -111,39 +111,39 @@ $(function () {
   });
 
   $('#golf_wear_sp').on('click', function () {
-    $('.haikei6_sp').addClass('opa5');
-    $('.haikei7_sp').removeClass('opa5');
+    $('.haikei6_sp').addClass('none');
+    $('.haikei7_sp').removeClass('none');
     document.addEventListener('touchmove', disableScroll, { passive: false });
     document.addEventListener('mousewheel', disableScroll, { passive: false });
   });
 
   $('#graphic_design_sp').on('click', function () {
-    $('.haikei6_sp').addClass('opa5');
-    $('.haikei8_sp').removeClass('opa5');
+    $('.haikei6_sp').addClass('none');
+    $('.haikei8_sp').removeClass('none');
     document.addEventListener('touchmove', disableScroll, { passive: false });
     document.addEventListener('mousewheel', disableScroll, { passive: false });
   });
 
   $('#ec_site_sp').on('click', function () {
-    $('.haikei6_sp').addClass('opa5');
-    $('.haikei9_sp').removeClass('opa5');
+    $('.haikei6_sp').addClass('none');
+    $('.haikei9_sp').removeClass('none');
     document.addEventListener('touchmove', disableScroll, { passive: false });
     document.addEventListener('mousewheel', disableScroll, { passive: false });
   });
 
   $('#video_production_sp').on('click', function () {
-    $('.haikei6_sp').addClass('opa5');
-    $('.haikei10_sp').removeClass('opa5');
+    $('.haikei6_sp').addClass('none');
+    $('.haikei10_sp').removeClass('none');
     document.addEventListener('touchmove', disableScroll, { passive: false });
     document.addEventListener('mousewheel', disableScroll, { passive: false });
   });
 
   $('.service_back_btn_sp').on('click', function () {
-    $('.haikei6_sp').removeClass('opa5');
-    $('.haikei7_sp').addClass('opa5');
-    $('.haikei8_sp').addClass('opa5');
-    $('.haikei9_sp').addClass('opa5');
-    $('.haikei10_sp').addClass('opa5');
+    $('.haikei6_sp').removeClass('none');
+    $('.haikei7_sp').addClass('none');
+    $('.haikei8_sp').addClass('none');
+    $('.haikei9_sp').addClass('none');
+    $('.haikei10_sp').addClass('none');
     document.removeEventListener('touchmove', disableScroll, { passive: false });
     document.removeEventListener('mousewheel', disableScroll, { passive: false });
   });
@@ -162,7 +162,7 @@ $(function () {
   }).done(function(data){
     if (data) {
       $('.news_div_sp').html(data);
-      $('.news_back_btn').addClass('opa5');
+      $('.news_back_btn').addClass('none');
     } else {
       console.log(data)
     }
@@ -184,7 +184,7 @@ function clickNewsSp(id) {
   }).done(function (data) {
     if (data) {
       $('.news_div_sp').html(data);
-      $('.news_back_btn_sp').removeClass('opa5');
+      $('.news_back_btn_sp').removeClass('none');
     } else {
       console.log(data)
     }
@@ -199,11 +199,11 @@ $(function() {
     $(this).toggleClass('active');
 
     if ($(this).hasClass('active')) {
-      $('.global_menu_sp').removeClass('opa5');       
+      $('.global_menu_sp').removeClass('none');       
       $('.global_menu_sp').addClass('menu_active');
     } else {
       $('.global_menu_sp').removeClass('menu_active');
-      $('.global_menu_sp').addClass('opa5');   
+      $('.global_menu_sp').addClass('none');   
     }
   });
 });

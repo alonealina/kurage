@@ -10,7 +10,7 @@ $(function(){
     }).done(function(data){
       if (data) {
         $('.news_div').html(data);
-        $('.news_back_btn').addClass('opa5');
+        $('.news_back_btn').addClass('none');
       } else {
         console.log(data)
       }
@@ -33,7 +33,7 @@ $(function(){
     }).done(function(data){
       if (data) {
         $('.news_div').html(data);
-        $('.news_back_btn').addClass('opa5');
+        $('.news_back_btn').addClass('none');
       } else {
         console.log(data)
       }
@@ -56,7 +56,7 @@ $(function(){
     }).done(function(data){
       if (data) {
         $('.news_div_sp').html(data);
-        $('.news_back_btn_sp').addClass('opa5');
+        $('.news_back_btn_sp').addClass('none');
       } else {
         console.log(data)
       }

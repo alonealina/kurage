@@ -7,7 +7,7 @@ try {
     $html = '';
     foreach($qry->fetchAll() as $row){
         $html .= '<a class="news_a" href="javascript:clickNews('. $row["id"] .');">
-        <div class="news_right3"><div>' . $row["created_at"] . '</div><div>' . $row["title"] . '</div></div></a>
+        <div class="news_column"><div>' . $row["created_at"] . '</div><div>' . $row["title"] . '</div></div></a>
         <div class="news_column_line"></div>';
     }
     echo json_encode($html);
